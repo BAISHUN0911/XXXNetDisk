@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="59790ccf-0b3a-49f6-8d3d-e08a2951e624" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../maven_work/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\maven_work\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2CyC7hKokKi2lHveyoo5sGLyEix" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../idea-project/springboot-study" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.44240838" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.lanqiao.netdisk" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LanqNetdisk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lanqiao.netdisk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lanqiao.netdisk" />
+      <option name="MAIN_CLASS_NAME" value="com.lanqiao.netdisk.ApplicationTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LanqNetdisk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lanqiao.netdisk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lanqiao.netdisk" />
+      <option name="MAIN_CLASS_NAME" value="com.lanqiao.netdisk.ApplicationTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LanqNetdisk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lanqiao.netdisk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lanqiao.netdisk" />
+      <option name="MAIN_CLASS_NAME" value="com.lanqiao.netdisk.ApplicationTest" />
+      <option name="METHOD_NAME" value="test3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTest.testmd5DigestAsHex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LanqNetdisk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lanqiao.netdisk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lanqiao.netdisk" />
+      <option name="MAIN_CLASS_NAME" value="com.lanqiao.netdisk.ApplicationTest" />
+      <option name="METHOD_NAME" value="testmd5DigestAsHex" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="LanqNetdisk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lanqiao.netdisk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lanqiao.netdisk.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.ApplicationTest.test3" />
+        <item itemvalue="JUnit.ApplicationTest.test2" />
+        <item itemvalue="JUnit.ApplicationTest.testmd5DigestAsHex" />
+        <item itemvalue="JUnit.ApplicationTest.test1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="59790ccf-0b3a-49f6-8d3d-e08a2951e624" name="Default Changelist" comment="" />
+      <created>1659765272543</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659765272543</updated>
+      <workItem from="1659765274024" duration="4541000" />
+      <workItem from="1659790018877" duration="5673000" />
+      <workItem from="1659796090255" duration="6746000" />
+      <workItem from="1659938683800" duration="10320000" />
+      <workItem from="1659961852679" duration="6606000" />
+      <workItem from="1660216048329" duration="8600000" />
+      <workItem from="1660226383113" duration="11182000" />
+      <workItem from="1660822141422" duration="5306000" />
+      <workItem from="1660979301755" duration="31000" />
+      <workItem from="1663050892928" duration="5851000" />
+      <workItem from="1663121041842" duration="10000" />
+      <workItem from="1663149366679" duration="325000" />
+      <workItem from="1663168797744" duration="909000" />
+      <workItem from="1663221822515" duration="2000" />
+      <workItem from="1664279604070" duration="3746000" />
+      <workItem from="1664283604063" duration="2096000" />
+      <workItem from="1664338475726" duration="6000" />
+      <workItem from="1665062068824" duration="1297000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.mybatis.spring.MyBatisSystemException" package="org.mybatis.spring" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

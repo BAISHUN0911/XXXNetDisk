@@ -1,0 +1,489 @@
+2022-10-05 13:37:14.124  INFO 2632 --- [main] com.lanqiao.netdisk.Application          : Starting Application v2.0.2 using Java 1.8.0_261 on DESKTOP-78T0BDR with PID 2632 (D:\Project\LanqNetdisk\target\LanqNetdisk-2.0.2.jar started by BOSHUN in D:\Project\LanqNetdisk\target)
+2022-10-05 13:37:14.136 DEBUG 2632 --- [main] com.lanqiao.netdisk.Application          : Running with Spring Boot v2.4.1, Spring v5.3.2
+2022-10-05 13:37:14.137  INFO 2632 --- [main] com.lanqiao.netdisk.Application          : No active profile set, falling back to default profiles: default
+2022-10-05 13:37:20.044  INFO 2632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-05 13:37:20.045  INFO 2632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-05 13:37:20.187  INFO 2632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-05 13:37:20.805  INFO 2632 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-05 13:37:21.118  INFO 2632 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-05 13:37:21.447  INFO 2632 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-05 13:37:21.710  INFO 2632 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-05 13:37:23.171  INFO 2632 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-05 13:37:23.313  INFO 2632 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-10-05 13:37:24.599  INFO 2632 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-05 13:37:27.501  WARN 2632 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-05 13:37:29.805  INFO 2632 --- [main] com.lanqiao.netdisk.Application          : Started Application in 16.624 seconds (JVM running for 17.89)
+2022-10-05 13:38:06.962  INFO 2632 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-05 13:38:07.168 ERROR 2632 --- [http-nio-8081-exec-1] c.l.netdisk.controller.UserController    : 解码异常
+2022-10-05 13:38:07.229 ERROR 2632 --- [http-nio-8081-exec-2] c.l.netdisk.controller.UserController    : 解码异常
+2022-10-05 13:38:21.991 DEBUG 2632 --- [http-nio-8081-exec-5] c.l.netdisk.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT userId,username,password,telephone,salt,registerTime FROM user WHERE (telephone = ?)
+2022-10-05 13:38:22.000 DEBUG 2632 --- [http-nio-8081-exec-5] c.l.netdisk.mapper.UserMapper.selectOne  : ==> Parameters: 18819951995(String)
+2022-10-05 13:38:22.011 DEBUG 2632 --- [http-nio-8081-exec-5] c.l.netdisk.mapper.UserMapper.selectOne  : <==      Total: 1
+2022-10-05 13:38:22.577 DEBUG 2632 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 13:38:22.578 DEBUG 2632 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), 0(Long), 10(Long)
+2022-10-05 13:38:22.583 DEBUG 2632 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 3
+2022-10-05 13:38:22.591 DEBUG 2632 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 13:38:22.591 DEBUG 2632 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), null
+2022-10-05 13:38:22.593 DEBUG 2632 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 13:38:30.574 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 13:38:30.575 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 13:38:30.577 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 3
+2022-10-05 13:38:30.578 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 13:38:30.578 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 13:38:30.579 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 13:38:34.356 DEBUG 2632 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 13:38:34.357 DEBUG 2632 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 13:38:34.360 DEBUG 2632 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 3
+2022-10-05 13:38:34.362 DEBUG 2632 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 13:38:34.362 DEBUG 2632 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 13:38:34.363 DEBUG 2632 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 13:38:36.737 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 13:38:36.737 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 13:38:36.739 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 3
+2022-10-05 13:38:36.741 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 13:38:36.742 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 13:38:36.743 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 13:38:52.120 DEBUG 2632 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 13:38:52.121 DEBUG 2632 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /实验楼/(String), 0(Long), 10(Long)
+2022-10-05 13:38:52.123 DEBUG 2632 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 0
+2022-10-05 13:38:52.124 DEBUG 2632 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 13:38:52.125 DEBUG 2632 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /实验楼/(String)
+2022-10-05 13:38:52.128 DEBUG 2632 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 13:39:01.915 DEBUG 2632 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 13:39:01.915 DEBUG 2632 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 13:39:01.917 DEBUG 2632 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 3
+2022-10-05 13:39:01.919 DEBUG 2632 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 13:39:01.920 DEBUG 2632 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 13:39:01.921 DEBUG 2632 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 13:39:08.183 DEBUG 2632 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 13:39:08.184 DEBUG 2632 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /实验楼/(String), 0(Long), 10(Long)
+2022-10-05 13:39:08.185 DEBUG 2632 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 0
+2022-10-05 13:39:08.186 DEBUG 2632 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 13:39:08.187 DEBUG 2632 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /实验楼/(String)
+2022-10-05 13:39:08.188 DEBUG 2632 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 13:39:12.231 DEBUG 2632 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 13:39:12.232 DEBUG 2632 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 13:39:12.235 DEBUG 2632 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 3
+2022-10-05 13:39:12.238 DEBUG 2632 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 13:39:12.239 DEBUG 2632 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 13:39:12.240 DEBUG 2632 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 13:40:16.923 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 13:40:16.924 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 13:40:16.927 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 3
+2022-10-05 13:40:16.931 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 13:40:16.931 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 13:40:16.933 DEBUG 2632 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 13:48:26.877  INFO 2632 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-05 13:48:26.888  INFO 2632 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-05 16:32:22.675  INFO 10808 --- [main] com.lanqiao.netdisk.Application          : Starting Application v2.0.2 using Java 1.8.0_261 on DESKTOP-78T0BDR with PID 10808 (D:\Project\LanqNetdisk\target\LanqNetdisk-2.0.2.jar started by BOSHUN in D:\Project\LanqNetdisk\target)
+2022-10-05 16:32:22.678 DEBUG 10808 --- [main] com.lanqiao.netdisk.Application          : Running with Spring Boot v2.4.1, Spring v5.3.2
+2022-10-05 16:32:22.680  INFO 10808 --- [main] com.lanqiao.netdisk.Application          : No active profile set, falling back to default profiles: default
+2022-10-05 16:32:28.948  INFO 10808 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-05 16:32:28.949  INFO 10808 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-05 16:32:29.113  INFO 10808 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-05 16:32:29.940  INFO 10808 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-05 16:32:30.398  INFO 10808 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-05 16:32:30.742  INFO 10808 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-05 16:32:31.068  INFO 10808 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-05 16:32:32.449  INFO 10808 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-05 16:32:32.513  INFO 10808 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-10-05 16:32:34.027  INFO 10808 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-05 16:32:36.937  WARN 10808 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-05 16:32:38.853  INFO 10808 --- [main] com.lanqiao.netdisk.Application          : Started Application in 17.383 seconds (JVM running for 18.073)
+2022-10-05 16:32:55.151  INFO 10808 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-05 16:32:55.418 ERROR 10808 --- [http-nio-8081-exec-1] c.l.netdisk.controller.UserController    : 解码异常
+2022-10-05 16:32:55.477 ERROR 10808 --- [http-nio-8081-exec-2] c.l.netdisk.controller.UserController    : 解码异常
+2022-10-05 16:33:04.376 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.netdisk.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT userId,username,password,telephone,salt,registerTime FROM user WHERE (telephone = ?)
+2022-10-05 16:33:04.385 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.netdisk.mapper.UserMapper.selectOne  : ==> Parameters: 18819951995(String)
+2022-10-05 16:33:04.397 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.netdisk.mapper.UserMapper.selectOne  : <==      Total: 1
+2022-10-05 16:33:05.021 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 16:33:05.021 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), 0(Long), 10(Long)
+2022-10-05 16:33:05.026 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 3
+2022-10-05 16:33:05.033 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 16:33:05.034 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), null
+2022-10-05 16:33:05.035 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 16:36:48.228 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 16:36:48.229 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 16:36:48.232 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 3
+2022-10-05 16:36:48.235 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 16:36:48.235 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 16:36:48.236 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 16:37:04.253 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 16:37:04.253 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 16:37:04.255 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 3
+2022-10-05 16:37:04.257 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 16:37:04.257 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 16:37:04.258 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 16:37:14.710 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 16:37:14.711 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 16:37:14.713 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 3
+2022-10-05 16:37:14.716 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 16:37:14.717 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 16:37:14.720 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 16:37:46.717 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectList   : ==>  Preparing: SELECT userFileId,userId,fileId,fileName,filePath,extendName,isDir,uploadTime FROM userfile WHERE (fileName = ? AND filePath = ? AND userId = ?)
+2022-10-05 16:37:46.718 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectList   : ==> Parameters: (String), (String), 0(Integer)
+2022-10-05 16:37:46.720 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectList   : <==      Total: 0
+2022-10-05 16:37:46.724 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.insert       : ==>  Preparing: INSERT INTO userfile ( userId, fileName, filePath, isDir, uploadTime ) VALUES ( ?, ?, ?, ?, ? )
+2022-10-05 16:37:46.725 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.insert       : ==> Parameters: 13(Long), 10-5(String), /(String), 1(Integer), 2022-10-05 16:37:46(String)
+2022-10-05 16:37:46.732 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.insert       : <==    Updates: 1
+2022-10-05 16:37:46.770 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 16:37:46.773 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 16:37:46.777 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 16:37:46.781 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 16:37:46.782 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 16:37:46.783 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 16:39:48.422 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 16:39:48.423 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 16:39:48.425 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 16:39:48.428 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 16:39:48.430 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 16:39:48.432 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 16:44:13.191 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 16:44:13.192 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 16:44:13.194 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 16:44:13.197 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 16:44:13.198 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 16:44:13.199 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 16:58:29.032 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 16:58:29.033 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 16:58:29.038 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 16:58:29.042 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 16:58:29.044 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 16:58:29.047 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:04:52.612 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:04:52.614 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:04:52.618 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:04:52.622 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:04:52.623 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:04:52.625 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:05:21.772 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:05:21.773 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /实验楼/(String), 0(Long), 10(Long)
+2022-10-05 17:05:21.774 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 0
+2022-10-05 17:05:21.775 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:05:21.776 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /实验楼/(String)
+2022-10-05 17:05:21.777 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:05:23.291 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:05:23.291 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:05:23.292 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:05:23.294 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:05:23.295 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:05:23.296 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:05:29.369 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:05:29.370 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /10-5/(String), 0(Long), 10(Long)
+2022-10-05 17:05:29.371 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 0
+2022-10-05 17:05:29.372 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:05:29.373 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /10-5/(String)
+2022-10-05 17:05:29.373 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:05:30.470 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:05:30.471 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:05:30.472 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:05:30.473 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:05:30.473 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:05:30.474 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:09:10.940 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:09:10.941 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:09:10.942 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:09:10.945 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:09:10.946 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:09:10.947 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:09:15.301 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:09:15.301 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:09:15.303 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:09:15.304 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:09:15.305 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:09:15.306 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:11:34.875 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:11:34.876 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:11:34.877 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:11:34.878 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:11:34.879 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:11:34.880 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:12:08.274 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:12:08.274 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:12:08.276 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:12:08.278 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:12:08.279 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:12:08.280 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:12:08.293 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:12:08.293 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:12:08.295 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:12:08.298 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:12:08.298 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:12:08.299 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:12:08.310 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:12:08.311 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:12:08.312 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:12:08.314 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:12:08.315 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:12:08.316 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:12:08.327 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:12:08.327 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:12:08.330 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:12:08.331 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:12:08.332 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:12:08.333 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:12:08.343 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:12:08.344 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:12:08.346 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:12:08.348 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:12:08.348 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:12:08.349 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:12:08.392 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:12:08.393 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:12:08.394 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:12:08.396 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:12:08.396 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:12:08.397 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:12:22.941 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:12:22.942 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:12:22.943 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:12:22.945 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:12:22.945 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:12:22.946 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:12:56.504 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:12:56.505 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:12:56.507 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:12:56.509 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:12:56.510 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:12:56.512 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:13:25.705 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:13:25.705 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:13:25.706 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:13:25.708 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:13:25.708 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:13:25.709 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:13:37.059 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:13:37.059 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:13:37.060 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:13:37.062 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:13:37.062 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:13:37.063 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:13:44.920 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:13:44.920 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:13:44.921 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:13:44.923 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:13:44.923 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:13:44.924 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:14:52.314 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:14:52.314 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:14:52.315 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:14:52.317 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:14:52.317 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:14:52.318 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:15:36.710 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:15:36.710 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:15:36.711 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:15:36.714 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:15:36.714 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:15:36.715 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:15:43.449 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:15:43.449 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:15:43.451 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:15:43.454 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:15:43.454 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:15:43.455 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:16:35.092 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:16:35.093 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:16:35.094 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:16:35.095 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:16:35.095 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:16:35.096 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:17:01.262 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:17:01.263 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:17:01.264 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:17:01.266 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:17:01.266 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:17:01.267 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:17:02.752 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:17:02.753 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:17:02.754 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:17:02.756 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:17:02.756 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:17:02.757 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:17:03.965 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:17:03.965 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:17:03.966 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:17:03.969 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:17:03.969 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:17:03.970 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:17:17.504 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:17:17.505 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:17:17.506 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:17:17.507 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:17:17.508 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:17:17.509 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:17:18.872 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:17:18.872 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:17:18.874 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:17:18.875 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:17:18.876 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:17:18.877 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:17:22.562 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:17:22.562 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:17:22.563 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:17:22.565 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:17:22.565 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:17:22.566 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:17:46.762 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:17:46.762 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:17:46.763 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:17:46.764 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:17:46.765 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:17:46.766 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:17:49.845 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:17:49.846 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:17:49.848 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:17:49.851 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:17:49.851 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:17:49.852 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:17:51.728 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:17:51.729 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:17:51.732 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:17:51.737 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:17:51.738 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:17:51.739 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:17:53.956 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:17:53.957 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:17:53.958 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:17:53.959 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:17:53.960 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:17:53.961 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:17:55.877 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:17:55.878 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:17:55.880 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:17:55.883 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:17:55.883 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:17:55.884 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:18:00.863 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:18:00.864 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:18:00.866 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:18:00.868 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:18:00.868 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:18:00.869 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:18:19.105 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:18:19.106 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:18:19.107 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:18:19.108 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:18:19.108 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:18:19.109 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:18:21.609 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:18:21.610 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:18:21.612 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:18:21.614 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:18:21.615 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:18:21.616 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:18:33.092 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:18:33.093 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:18:33.094 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:18:33.097 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:18:33.098 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:18:33.099 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:18:35.238 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:18:35.238 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:18:35.240 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:18:35.241 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:18:35.242 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:18:35.243 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:18:37.482 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:18:37.482 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:18:37.483 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:18:37.485 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:18:37.486 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:18:37.486 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:18:38.857 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:18:38.858 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:18:38.859 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:18:38.861 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:18:38.862 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:18:38.863 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:19:01.476 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:19:01.476 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:19:01.478 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:19:01.481 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:19:01.481 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:19:01.482 DEBUG 10808 --- [http-nio-8081-exec-4] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:19:12.365 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:19:12.366 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:19:12.367 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:19:12.370 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:19:12.371 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:19:12.372 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:19:20.477 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:19:20.477 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:19:20.479 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:19:20.481 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:19:20.482 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:19:20.483 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:19:22.600 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:19:22.600 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:19:22.602 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:19:22.604 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:19:22.604 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:19:22.605 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:19:28.852 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:19:28.853 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:19:28.855 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:19:28.857 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:19:28.858 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:19:28.859 DEBUG 10808 --- [http-nio-8081-exec-7] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:19:30.026 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:19:30.027 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:19:30.029 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:19:30.032 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:19:30.032 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:19:30.033 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:19:32.395 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:19:32.395 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:19:32.397 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:19:32.398 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:19:32.398 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:19:32.399 DEBUG 10808 --- [http-nio-8081-exec-10] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:19:33.900 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:19:33.902 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:19:33.905 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:19:33.907 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:19:33.907 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:19:33.908 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:19:35.795 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:19:35.796 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:19:35.797 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:19:35.800 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:19:35.800 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:19:35.801 DEBUG 10808 --- [http-nio-8081-exec-2] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:19:37.815 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:19:37.815 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:19:37.816 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:19:37.818 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:19:37.818 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:19:37.819 DEBUG 10808 --- [http-nio-8081-exec-5] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:32:24.192 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:32:24.193 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:32:24.196 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:32:24.199 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:32:24.200 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:32:24.201 DEBUG 10808 --- [http-nio-8081-exec-6] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:33:01.897 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? and a.filePath = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:33:01.898 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), /(String), 0(Long), 10(Long)
+2022-10-05 17:33:01.899 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:33:01.903 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:33:01.903 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), /(String)
+2022-10-05 17:33:01.905 DEBUG 10808 --- [http-nio-8081-exec-3] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:33:08.986 ERROR 10808 --- [http-nio-8081-exec-4] c.l.netdisk.controller.UserController    : 解码异常
+2022-10-05 17:33:09.165 ERROR 10808 --- [http-nio-8081-exec-2] c.l.netdisk.controller.UserController    : 解码异常
+2022-10-05 17:33:17.769 ERROR 10808 --- [http-nio-8081-exec-7] c.l.netdisk.controller.UserController    : 解码异常
+2022-10-05 17:34:31.231 ERROR 10808 --- [http-nio-8081-exec-5] c.l.netdisk.controller.UserController    : 解码异常
+2022-10-05 17:34:40.543 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.netdisk.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT userId,username,password,telephone,salt,registerTime FROM user WHERE (telephone = ?)
+2022-10-05 17:34:40.544 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.netdisk.mapper.UserMapper.selectOne  : ==> Parameters: 18819951995(String)
+2022-10-05 17:34:40.545 DEBUG 10808 --- [http-nio-8081-exec-8] c.l.netdisk.mapper.UserMapper.selectOne  : <==      Total: 1
+2022-10-05 17:34:40.669 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:34:40.669 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), 0(Long), 10(Long)
+2022-10-05 17:34:40.671 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:34:40.676 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:34:40.677 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), null
+2022-10-05 17:34:40.678 DEBUG 10808 --- [http-nio-8081-exec-9] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
+2022-10-05 17:41:36.208 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : ==>  Preparing: select * from userfile a left join file on file.fileId = a.fileId WHERE a.userId = ? ORDER BY isDir desc limit ?, ?
+2022-10-05 17:41:36.209 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : ==> Parameters: 13(Long), 0(Long), 10(Long)
+2022-10-05 17:41:36.212 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.m.UserFileMapper.userfileList      : <==      Total: 4
+2022-10-05 17:41:36.216 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM userfile WHERE (userId = ? AND filePath = ?)
+2022-10-05 17:41:36.217 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : ==> Parameters: 13(Long), null
+2022-10-05 17:41:36.218 DEBUG 10808 --- [http-nio-8081-exec-1] c.l.n.mapper.UserFileMapper.selectCount  : <==      Total: 1
