@@ -35,7 +35,7 @@ public class OpenApiConfig {
         return new ApiInfoBuilder()
                 .title("蓝桥网盘 API")
                 .description("基于springboot + vue 框架开发的Web文件系统，旨在为用户提供一个简单、方便的文件存储方案，能够以完善的目录结构体系，对文件进行管理 。")
-                .version("1.0")
+                .version("2.0.1")
                 .build();
     }
 
