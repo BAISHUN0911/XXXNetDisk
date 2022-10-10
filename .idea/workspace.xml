@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59790ccf-0b3a-49f6-8d3d-e08a2951e624" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/config/OpenApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/config/OpenApiConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/model/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/model/File.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LanqNetdisk-2.0.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/LanqNetdisk-2.0.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LanqNetdisk-2.0.2.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/LanqNetdisk-2.0.2.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LanqNetdisk.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LanqNetdisk.log.2022-09-28.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LanqNetdisk.log.2022-10-04.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/config/OpenApiConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/config/OpenApiConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/model/File.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/model/File.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-09-14T23-24-24_990-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-09-14T23-28-56_399-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.lanqiao.netdisk.ApplicationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.lanqiao.netdisk.ApplicationTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.lanqiao.netdisk.ApplicationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.lanqiao.netdisk.ApplicationTest.txt" afterDir="false" />
-    </list>
+    <list default="true" id="59790ccf-0b3a-49f6-8d3d-e08a2951e624" name="Default Changelist" comment="10-10" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,7 +181,16 @@
       <workItem from="1665135311488" duration="1240000" />
       <workItem from="1665211644055" duration="6990000" />
       <workItem from="1665292666072" duration="12660000" />
+      <workItem from="1665383237897" duration="293000" />
     </task>
+    <task id="LOCAL-00001" summary="10-10">
+      <created>1665383495895</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665383495895</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +207,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="10-10" />
+    <option name="LAST_COMMIT_MESSAGE" value="10-10" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,0 +1,92 @@
+2022-10-09 14:12:13.962  INFO 29528 --- [main] com.lanqiao.netdisk.Application          : Starting Application using Java 1.8.0_261 on DESKTOP-78T0BDR with PID 29528 (D:\Project\LanqNetdisk\target\classes started by BOSHUN in D:\Project\LanqNetdisk)
+2022-10-09 14:12:13.964 DEBUG 29528 --- [main] com.lanqiao.netdisk.Application          : Running with Spring Boot v2.4.1, Spring v5.3.2
+2022-10-09 14:12:13.965  INFO 29528 --- [main] com.lanqiao.netdisk.Application          : No active profile set, falling back to default profiles: default
+2022-10-09 14:12:15.788  INFO 29528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-09 14:12:15.788  INFO 29528 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-09 14:12:15.888  INFO 29528 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-09 14:12:16.017  INFO 29528 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-09 14:12:16.082  INFO 29528 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-09 14:12:16.227  INFO 29528 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-09 14:12:16.383  INFO 29528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-09 14:12:17.543  INFO 29528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-09 14:12:17.559  INFO 29528 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-10-09 14:12:18.645  INFO 29528 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-09 14:12:20.806  WARN 29528 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-09 14:12:21.526  INFO 29528 --- [main] com.lanqiao.netdisk.Application          : Started Application in 7.952 seconds (JVM running for 9.624)
+2022-10-09 14:29:53.321  INFO 29528 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-09 14:33:29.918  INFO 34688 --- [main] com.lanqiao.netdisk.Application          : Starting Application using Java 1.8.0_261 on DESKTOP-78T0BDR with PID 34688 (D:\Project\LanqNetdisk\target\classes started by BOSHUN in D:\Project\LanqNetdisk)
+2022-10-09 14:33:29.921 DEBUG 34688 --- [main] com.lanqiao.netdisk.Application          : Running with Spring Boot v2.4.1, Spring v5.3.2
+2022-10-09 14:33:29.921  INFO 34688 --- [main] com.lanqiao.netdisk.Application          : No active profile set, falling back to default profiles: default
+2022-10-09 14:33:31.120  INFO 34688 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-09 14:33:31.120  INFO 34688 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-09 14:33:31.208  INFO 34688 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-09 14:33:31.332  INFO 34688 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-09 14:33:31.363  INFO 34688 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-09 14:33:31.439  INFO 34688 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-09 14:33:31.573  INFO 34688 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-09 14:33:32.513  INFO 34688 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-09 14:33:32.523  INFO 34688 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-10-09 14:33:32.920  INFO 34688 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-09 14:33:34.669  WARN 34688 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-09 14:33:35.318  INFO 34688 --- [main] com.lanqiao.netdisk.Application          : Started Application in 5.838 seconds (JVM running for 7.333)
+2022-10-09 14:33:39.339  INFO 34688 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-09 14:55:48.236  INFO 35244 --- [main] com.lanqiao.netdisk.Application          : Starting Application using Java 1.8.0_261 on DESKTOP-78T0BDR with PID 35244 (D:\Project\LanqNetdisk\target\classes started by BOSHUN in D:\Project\LanqNetdisk)
+2022-10-09 14:55:48.238 DEBUG 35244 --- [main] com.lanqiao.netdisk.Application          : Running with Spring Boot v2.4.1, Spring v5.3.2
+2022-10-09 14:55:48.239  INFO 35244 --- [main] com.lanqiao.netdisk.Application          : No active profile set, falling back to default profiles: default
+2022-10-09 14:55:49.379  INFO 35244 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-09 14:55:49.379  INFO 35244 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-09 14:55:49.467  INFO 35244 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-09 14:55:49.585  INFO 35244 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-09 14:55:49.619  INFO 35244 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-09 14:55:49.695  INFO 35244 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-09 14:55:49.816  INFO 35244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-09 14:55:50.819  INFO 35244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-09 14:55:50.828  INFO 35244 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-10-09 14:55:51.279  INFO 35244 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-09 14:55:53.056  WARN 35244 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-09 14:55:53.730  INFO 35244 --- [main] com.lanqiao.netdisk.Application          : Started Application in 5.907 seconds (JVM running for 7.39)
+2022-10-09 14:56:14.255  INFO 35244 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-09 14:56:14.273 ERROR 35244 --- [http-nio-8081-exec-1] c.l.n.a.GlobalExceptionHandlerAdvice     : 鍏ㄥ眬寮傚父鎹曡幏: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2022-10-09 14:57:07.708 ERROR 35244 --- [http-nio-8081-exec-4] c.l.n.a.GlobalExceptionHandlerAdvice     : 鍏ㄥ眬寮傚父鎹曡幏: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2022-10-09 14:59:22.105  INFO 10640 --- [main] com.lanqiao.netdisk.Application          : Starting Application using Java 1.8.0_261 on DESKTOP-78T0BDR with PID 10640 (D:\Project\LanqNetdisk\target\classes started by BOSHUN in D:\Project\LanqNetdisk)
+2022-10-09 14:59:22.107 DEBUG 10640 --- [main] com.lanqiao.netdisk.Application          : Running with Spring Boot v2.4.1, Spring v5.3.2
+2022-10-09 14:59:22.107  INFO 10640 --- [main] com.lanqiao.netdisk.Application          : No active profile set, falling back to default profiles: default
+2022-10-09 14:59:23.327  INFO 10640 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-09 14:59:23.327  INFO 10640 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-09 14:59:23.410  INFO 10640 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-09 14:59:23.524  INFO 10640 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-09 14:59:23.555  INFO 10640 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-09 14:59:23.630  INFO 10640 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-09 14:59:23.752  INFO 10640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-09 14:59:24.684  INFO 10640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-09 14:59:24.693  INFO 10640 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-10-09 14:59:25.105  INFO 10640 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-09 14:59:26.839  WARN 10640 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-09 14:59:27.524  INFO 10640 --- [main] com.lanqiao.netdisk.Application          : Started Application in 5.833 seconds (JVM running for 7.318)
+2022-10-09 14:59:49.029  INFO 10640 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-09 18:29:56.132  INFO 3272 --- [main] com.lanqiao.netdisk.ApplicationTest      : Starting ApplicationTest using Java 1.8.0_261 on DESKTOP-78T0BDR with PID 3272 (started by BOSHUN in D:\Project\LanqNetdisk)
+2022-10-09 18:29:56.133 DEBUG 3272 --- [main] com.lanqiao.netdisk.ApplicationTest      : Running with Spring Boot v2.4.1, Spring v5.3.2
+2022-10-09 18:29:56.136  INFO 3272 --- [main] com.lanqiao.netdisk.ApplicationTest      : No active profile set, falling back to default profiles: default
+2022-10-09 18:29:57.671  INFO 3272 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-09 18:29:57.773  INFO 3272 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-09 18:29:57.905  INFO 3272 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-09 18:29:58.721  INFO 3272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-09 18:29:59.768  INFO 3272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-09 18:29:59.786  INFO 3272 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-10-09 18:30:00.540  INFO 3272 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-09 18:30:03.092  WARN 3272 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-09 18:30:04.556  INFO 3272 --- [main] com.lanqiao.netdisk.ApplicationTest      : Started ApplicationTest in 8.749 seconds (JVM running for 9.724)
+2022-10-09 18:30:04.709 DEBUG 3272 --- [main] c.l.n.mapper.UserMapper.insertUser       : ==>  Preparing: insert into user (username, password, telephone) value (?, ?, ?)
+2022-10-09 18:30:04.722 DEBUG 3272 --- [main] c.l.n.mapper.UserMapper.insertUser       : ==> Parameters: 用户名1(String), 密码1(String), 手机号1(String)
+2022-10-09 18:30:04.731 DEBUG 3272 --- [main] c.l.n.mapper.UserMapper.insertUser       : <==    Updates: 1
+2022-10-09 18:30:04.737 DEBUG 3272 --- [main] c.l.n.mapper.UserMapper.selectUser       : ==>  Preparing: select * from user
+2022-10-09 18:30:04.737 DEBUG 3272 --- [main] c.l.n.mapper.UserMapper.selectUser       : ==> Parameters: 
+2022-10-09 18:30:04.756 DEBUG 3272 --- [main] c.l.n.mapper.UserMapper.selectUser       : <==      Total: 9
+2022-10-09 18:30:04.791 DEBUG 3272 --- [main] c.l.netdisk.mapper.UserMapper.insert     : ==>  Preparing: INSERT INTO user ( username, password, telephone ) VALUES ( ?, ?, ? )
+2022-10-09 18:30:04.792 DEBUG 3272 --- [main] c.l.netdisk.mapper.UserMapper.insert     : ==> Parameters: 用户名2(String), 密码2(String), 手机号2(String)
+2022-10-09 18:30:04.796 DEBUG 3272 --- [main] c.l.netdisk.mapper.UserMapper.insert     : <==    Updates: 1
+2022-10-09 18:30:04.804 DEBUG 3272 --- [main] c.l.n.mapper.UserMapper.selectList       : ==>  Preparing: SELECT userId,username,password,telephone,salt,registerTime FROM user
+2022-10-09 18:30:04.804 DEBUG 3272 --- [main] c.l.n.mapper.UserMapper.selectList       : ==> Parameters: 
+2022-10-09 18:30:04.808 DEBUG 3272 --- [main] c.l.n.mapper.UserMapper.selectList       : <==      Total: 10
+2022-10-09 18:30:04.870  INFO 3272 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-09 18:30:04.882  INFO 3272 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
