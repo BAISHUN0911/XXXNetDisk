@@ -69,7 +69,9 @@ public class FiletransferController {
                 userFile.setExtendName(FileUtil.getFileExtendName(filename));               //设置文件扩展名，通过自写FileUtil
                 userFile.setIsDir(0);                                   //设置该文件是非目录的
                 userFile.setUploadTime(DateUtil.getCurrentTime());      //设置文件上传时间
+                userFile.setDeleteFlag(0);
                 userFileService.save(userFile);                         //将这个文件保存到userfile表中
+                // fileService.increaseFilePointCount(file.getFileId());
                 uploadFileVO.setSkipUpload(true);                       //这个文件成功使用了秒传，跳过了常规上传步骤
             }else {
                 uploadFileVO.setSkipUpload(false);      //如果查询出的文件集合为空，证明这个文件没上传过，不能文件秒传，只能通过普通方式上传。

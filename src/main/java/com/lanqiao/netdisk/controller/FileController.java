@@ -1,8 +1,11 @@
 package com.lanqiao.netdisk.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.lanqiao.netdisk.common.RestResult;
+import com.lanqiao.netdisk.dto.BatchDeleteFileDTO;
 import com.lanqiao.netdisk.dto.CreateFileDTO;
+import com.lanqiao.netdisk.dto.DeleteFileDTO;
 import com.lanqiao.netdisk.dto.UserfileListDTO;
 import com.lanqiao.netdisk.model.User;
 import com.lanqiao.netdisk.model.UserFile;
@@ -52,8 +55,9 @@ public class FileController {
         userFile.setUserId(sessionUser.getUserId());
         userFile.setFileName(createFileDto.getFileName());
         userFile.setFilePath(createFileDto.getFilePath());
-        userFile.setIsDir(1);//创建的是文件夹
+        userFile.setIsDir(1);                       //创建的是文件夹
         userFile.setUploadTime(DateUtil.getCurrentTime());
+        userFile.setDeleteFlag(0);                  //标志为0代表未删除
         userfileService.save(userFile);
         return RestResult.success();
 
@@ -74,10 +78,11 @@ public class FileController {
                 userfileListDTO.getCurrentPage(),
                 userfileListDTO.getPageCount()
                 );
-        System.out.println("fileList======================"+fileList);
+        System.out.println("fileList======================>"+fileList);
         LambdaQueryWrapper<UserFile> userFileLambdaQueryWrapper = new LambdaQueryWrapper<>();
-        userFileLambdaQueryWrapper.eq(UserFile::getUserId,
-                sessionUser.getUserId()).eq(UserFile::getFilePath,userfileListDTO.getFilePath());
+        userFileLambdaQueryWrapper.eq(UserFile::getUserId, sessionUser.getUserId())
+                .eq(UserFile::getFilePath,userfileListDTO.getFilePath())
+                .eq(UserFile::getDeleteFlag,0);
         int count = userfileService.count(userFileLambdaQueryWrapper);
         HashMap<String, Object> map = new HashMap<>();
         map.put("count",count);
@@ -98,5 +103,28 @@ public class FileController {
         return RestResult.success().data(map);
 
     }
+
+    @Operation(summary = "删除文件",description = "可以删除文件或者目录",tags = {"file"})
+    @RequestMapping(value = "/deletefile",method = RequestMethod.POST)
+    @ResponseBody
+    public RestResult deleteFile(@RequestBody DeleteFileDTO deleteFileDTO,@RequestHeader("token")String token){
+        User sessionUser = userService.getUserByToken(token);
+        userfileService.deleteUserFile(deleteFileDTO.getUserFileId(), sessionUser.getUserId());
+        return RestResult.success();
+    }
+
+    @Operation(summary = "批量删除文件", description = "批量删除文件", tags = { "file" })
+    @RequestMapping(value = "/batchdeletefile", method = RequestMethod.POST)
+    @ResponseBody
+    public RestResult<String> deleteImageByIds(@RequestBody BatchDeleteFileDTO batchDeleteFileDto,
+                                               @RequestHeader("token") String token) {
+        User sessionUser = userService.getUserByToken(token);
+        List<UserFile> userFiles = JSON.parseArray(batchDeleteFileDto.getFiles(), UserFile.class);
+        for (UserFile userFile : userFiles) {
+            userfileService.deleteUserFile(userFile.getUserFileId(), sessionUser.getUserId());
+        }
+        return RestResult.success().message("批量删除文件成功");
+    }
+
 
 }

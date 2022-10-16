@@ -18,6 +18,7 @@
             <if test="userFile.extendName != null">
                 and a.extendName = #{userFile.extendName}
             </if>
+                and a.deleteFlag = 0
         </where>
         ORDER BY  isDir desc
         limit #{beginCount}, #{pageCount}
@@ -30,6 +31,7 @@
             #{fileName}
         </foreach>
         and userId = #{userId}
+        and deleteFlag = 0
     </sql>
     <sql id="selectByNotExtendName">
         left join file on file.fileId = userfile.fileId
@@ -38,6 +40,7 @@
             #{fileName}
         </foreach>
         and userId = #{userId}
+        and deleteFlag = 0
     </sql>
 
     <select id="selectFileByExtendName" parameterType="UserFile" resultType="com.lanqiao.netdisk.vo.UserfileListVO">

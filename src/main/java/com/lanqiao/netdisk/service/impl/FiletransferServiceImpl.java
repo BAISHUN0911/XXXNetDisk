@@ -69,6 +69,7 @@ public class FiletransferServiceImpl implements FiletransferService {
                 userFile.setExtendName(uploadFile.getFileType());
                 userFile.setFileName(uploadFile.getFileName());
                 userFile.setFilePath(uploadFileDTO.getFilePath());
+                userFile.setDeleteFlag(0);
                 userFile.setUserId(userId);
                 userFile.setIsDir(0);
                 userFile.setUploadTime(DateUtil.getCurrentTime());

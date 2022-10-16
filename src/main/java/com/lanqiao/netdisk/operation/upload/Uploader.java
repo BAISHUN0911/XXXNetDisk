@@ -101,7 +101,7 @@ public abstract class Uploader {
      * @return
      */
     protected String getFileName(String fileName){
-        if (!fileName.contains(".")) {
+        if (!fileName.contains(".")) {          //文件没有扩展名
             return fileName;
         }
         return fileName.substring(0, fileName.lastIndexOf("."));

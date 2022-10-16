@@ -12,11 +12,7 @@ import java.util.List;
 public interface UserFileMapper extends BaseMapper<UserFile> {
 
     //文件列表查询
-    List<UserfileListVO> userfileList (
-            UserFile userFile,
-            Long beginCount,
-            Long pageCount
-            );
+    List<UserfileListVO> userfileList (UserFile userFile, Long beginCount, Long pageCount);
 
     /**
      *        在已知扩展名中查询文件

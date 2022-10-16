@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.UUID;
 
 /**
- *
+ * 子类继承父类，继承父类的特征和行为，并可以做出自己的一些扩展。
  */
 @Component
 public class LocalStorageUploader extends Uploader {
@@ -131,4 +131,6 @@ public class LocalStorageUploader extends Uploader {
 
         return saveUploadFileList;
     }
+
+
 }
