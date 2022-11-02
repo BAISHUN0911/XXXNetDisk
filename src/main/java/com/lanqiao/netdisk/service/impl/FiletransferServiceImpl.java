@@ -105,6 +105,10 @@ public class FiletransferServiceImpl implements FiletransferService {
         downloader.download(httpServletResponse, downloadFile);             //使用具体下载工厂的实现LocalStorageDownloader中方法进行下载
     }
 
+    @Override
+    public Long selectStorageSizeByUserId(Long userId) {
+        return userFileMapper.selectStorageSizeByUserId(userId);
+    }
 
 
 }

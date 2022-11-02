@@ -4,6 +4,7 @@ import com.lanqiao.netdisk.common.RestResult;
 import com.lanqiao.netdisk.dto.DownloadFileDTO;
 import com.lanqiao.netdisk.dto.UploadFileDTO;
 import com.lanqiao.netdisk.model.File;
+import com.lanqiao.netdisk.model.Storage;
 import com.lanqiao.netdisk.model.User;
 import com.lanqiao.netdisk.model.UserFile;
 import com.lanqiao.netdisk.service.FileService;
@@ -100,6 +101,16 @@ public class FiletransferController {
     @RequestMapping(value = "/downloadfile", method = RequestMethod.GET)
     public void downloadFile(HttpServletResponse response, DownloadFileDTO downloadFileDTO) {
         filetransferService.downloadFile(response, downloadFileDTO);
+    }
+
+    @Operation(summary = "获取存储信息", description = "获取存储信息，返回值单位为字节（B）", tags = {"filetransfer"})
+    @RequestMapping(value = "/getstorage", method = RequestMethod.GET)
+    @ResponseBody
+    public RestResult<Long> getStorage(@RequestHeader("token") String token) {
+        User sessionUser = userService.getUserByToken(token);
+        Storage storageBean = new Storage();
+        Long storageSize = filetransferService.selectStorageSizeByUserId(sessionUser.getUserId());
+        return RestResult.success().data(storageSize);
     }
 
 

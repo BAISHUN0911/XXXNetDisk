@@ -15,6 +15,7 @@ import com.lanqiao.netdisk.service.UserFileService;
 import com.lanqiao.netdisk.util.DateUtil;
 import com.lanqiao.netdisk.vo.UserfileListVO;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -51,7 +52,7 @@ public class UserFileServiceImpl extends ServiceImpl<UserFileMapper, UserFile> i
     @Override
     public Map<String, Object> getUserFileByType(int fileType, Long currentPage, Long pageCount, Long userId) {
         Long beginCount = (currentPage-1)*pageCount;
-        List<UserfileListVO> fileList;
+        List<UserfileListVO> fileList;              //
         Long total;
         if(fileType== FileConstant.OTHER_TYPE){
             ArrayList<String> arrayList = new ArrayList<>();
@@ -60,8 +61,7 @@ public class UserFileServiceImpl extends ServiceImpl<UserFileMapper, UserFile> i
             arrayList.addAll(Arrays.asList(FileConstant.VIDEO_FILE));
             arrayList.addAll(Arrays.asList(FileConstant.MUSIC_FILE));
             userFileMapper.selectFileNotInExtendNames(arrayList,beginCount,pageCount,userId);
-            total=userFileMapper.selectCountNotInExtendNames(arrayList,beginCount,pageCount,userId);
-
+            total=userFileMapper.selectCountNotInExtendNames(arrayList,beginCount,pageCount,userId);    //计算这类文件的数量，目前不知道啥用
         }else {
             List<String> fileExtends = null;
             if(fileType==FileConstant.IMAGE_TYPE){
@@ -74,7 +74,7 @@ public class UserFileServiceImpl extends ServiceImpl<UserFileMapper, UserFile> i
                 fileExtends = Arrays.asList(FileConstant.MUSIC_FILE);
             }
             fileList=userFileMapper.selectFileByExtendName(fileExtends,beginCount,pageCount,userId);
-            total=userFileMapper.selectCountByExtendName(fileExtends, beginCount, pageCount,userId);
+            total=userFileMapper.selectCountByExtendName(fileExtends, beginCount, pageCount,userId);    //计算这类文件的数量
             HashMap<String, Object> map = new HashMap<>();
             map.put("list",fileList);
             map.put("total",total);
@@ -137,7 +137,7 @@ public class UserFileServiceImpl extends ServiceImpl<UserFileMapper, UserFile> i
 
     @Override
     public List<UserFile> selectFileTreeListLikeFilePath(String filePath, long userId) {
-//UserFile userFile = new UserFile();
+        //UserFile userFile = new UserFile();
         filePath = filePath.replace("\\", "\\\\\\\\");
         filePath = filePath.replace("'", "\\'");
         filePath = filePath.replace("%", "\\%");
@@ -151,6 +151,60 @@ public class UserFileServiceImpl extends ServiceImpl<UserFileMapper, UserFile> i
 
         lambdaQueryWrapper.eq(UserFile::getUserId, userId).likeRight(UserFile::getFilePath, filePath);
         return userFileMapper.selectList(lambdaQueryWrapper);
+    }
+
+    @Override
+    public List<UserFile> selectFilePathTreeByUserId(Long userId) {
+        LambdaQueryWrapper<UserFile> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+        lambdaQueryWrapper.eq(UserFile::getUserId,userId)
+                .eq(UserFile::getIsDir,1);
+        return userFileMapper.selectList(lambdaQueryWrapper);
+    }
+
+    @Override
+    public void updateFilepathByFilepath(String oldfilePath, String newfilePath, String fileName, String extendName, Long userId) {
+        if ("null".equals(extendName)){
+            extendName=null;
+        }
+        LambdaUpdateWrapper<UserFile> lambdaUpdateWrapper = new LambdaUpdateWrapper<>();
+        lambdaUpdateWrapper.set(UserFile::getFilePath,newfilePath)
+                .eq(UserFile::getFilePath,oldfilePath)
+                .eq(UserFile::getFileName,fileName)
+                .eq(UserFile::getUserId,userId);
+
+        if (StringUtils.isNotEmpty(extendName)){
+            lambdaUpdateWrapper.eq(UserFile::getExtendName,extendName);
+        }else {
+            lambdaUpdateWrapper.isNull(UserFile::getExtendName);
+        }
+
+        userFileMapper.update(null,lambdaUpdateWrapper);
+        //移动子目录
+        oldfilePath=oldfilePath+fileName+"/";
+        newfilePath=newfilePath+fileName+"/";
+        oldfilePath = oldfilePath.replace("\\", "\\\\\\\\");
+        oldfilePath = oldfilePath.replace("'", "\\'");
+        oldfilePath = oldfilePath.replace("%", "\\%");
+        oldfilePath = oldfilePath.replace("_", "\\_");
+        if (extendName==null){
+            //没扩展名，一般是目录，需要移动子目录
+            userFileMapper.updateFilepathByFilepath(oldfilePath,newfilePath,userId);
+        }
+    }
+
+    @Override
+    public List<UserFile> selectUserFileByNameAndPath(String fileName, String filePath, Long userId) {
+        LambdaQueryWrapper<UserFile> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+        lambdaQueryWrapper.eq(UserFile::getFileName,fileName)
+                .eq(UserFile::getFilePath,filePath)
+                .eq(UserFile::getUserId,userId)
+                .eq(UserFile::getDeleteFlag,"0");
+        return userFileMapper.selectList(lambdaQueryWrapper);
+    }
+
+    @Override
+    public void replaceUserFilePath(String filePath, String oldFilePath, Long userId) {
+        userFileMapper.replaceFilePath(filePath,oldFilePath,userId);
     }
 
 

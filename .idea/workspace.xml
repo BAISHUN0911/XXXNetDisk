@@ -7,91 +7,18 @@
     <list default="true" id="59790ccf-0b3a-49f6-8d3d-e08a2951e624" name="Default Changelist" comment="10-10第二次提交">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LanqNetdisk.log" beforeDir="false" afterPath="$PROJECT_DIR$/LanqNetdisk.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LanqNetdisk.log.2022-10-09.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LanqNetdisk.log.2022-10-10.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/controller/FileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/controller/FiletransferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/controller/FiletransferController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/mapper/UserFileMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/mapper/UserFileMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/model/UserFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/model/UserFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/operation/upload/Uploader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/operation/upload/Uploader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/operation/upload/product/LocalStorageUploader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/operation/upload/product/LocalStorageUploader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/service/FiletransferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/service/FiletransferService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/service/UserFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/service/UserFileService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/service/impl/FiletransferServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/service/impl/FiletransferServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/service/impl/UserFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/service/impl/UserFileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanqiao/netdisk/util/FileUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserFileMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserFileMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LanqNetdisk-2.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LanqNetdisk-2.0.2.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LanqNetdisk.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-druid.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/advice/GlobalExceptionHandlerAdvice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/common/RestResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/common/ResultCodeEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/config/OpenApiConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/config/PropertiesConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/config/jwt/JwtHeader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/config/jwt/JwtPayload.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/config/jwt/JwtProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/config/jwt/RegisterdClaims.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/constant/FileConstant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/controller/FileController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/controller/FiletransferController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/controller/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/dto/CreateFileDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/dto/DownloadFileDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/dto/RegisterDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/dto/UploadFileDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/dto/UserfileListDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/exception/NotSameFileExpection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/exception/UploadException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/mapper/FileMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/mapper/UserFileMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/mapper/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/model/File.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/model/UserFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/operation/FileOperationFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/operation/LocalStorageOperationFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/operation/delete/Deleter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/operation/delete/domain/DeleteFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/operation/delete/product/LocalStorageDeleter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/operation/download/Downloader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/operation/download/domain/DownloadFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/operation/download/product/LocalStorageDownloader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/operation/upload/Uploader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/operation/upload/domain/UploadFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/operation/upload/product/LocalStorageUploader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/service/FileService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/service/FiletransferService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/service/UserFileService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/service/impl/FileServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/service/impl/FiletransferServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/service/impl/UserFileServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/util/DateUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/util/FileUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/util/JWTUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/util/PathUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/util/PropertiesUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/vo/LoginVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/vo/UploadFileVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lanqiao/netdisk/vo/UserfileListVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserFileMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-10-09T18-29-54_481-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.lanqiao.netdisk.ApplicationTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.lanqiao.netdisk.ApplicationTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lanqiao/netdisk/ApplicationTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +53,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2CyC7hKokKi2lHveyoo5sGLyEix" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -141,7 +70,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../idea-project/springboot-study" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -149,7 +78,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.44240838" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -157,17 +86,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ApplicationTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LanqNetdisk" />
       <extension name="coverage">
@@ -282,6 +200,12 @@
       <workItem from="1665383237897" duration="3967000" />
       <workItem from="1665391732070" duration="25000" />
       <workItem from="1665732770236" duration="9890000" />
+      <workItem from="1666512525210" duration="7883000" />
+      <workItem from="1666531767215" duration="5036000" />
+      <workItem from="1666616998943" duration="6520000" />
+      <workItem from="1666679750892" duration="10584000" />
+      <workItem from="1666703493467" duration="3342000" />
+      <workItem from="1666763304817" duration="7232000" />
     </task>
     <task id="LOCAL-00001" summary="10-10">
       <created>1665383495895</created>

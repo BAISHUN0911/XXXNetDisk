@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.lanqiao.netdisk.mapper.UserFileMapper">
-<!--    创建用户文件分页查询 sql-->
+    <!--    创建用户文件分页查询 sql-->
     <select id="userfileList" resultType="com.lanqiao.netdisk.vo.UserfileListVO">
         select * from userfile a
         left join file on file.fileId = a.fileId
@@ -65,5 +65,20 @@
         <include refid="selectByNotExtendName"></include>
     </select>
 
+    <update id="updateFilepathByFilepath">
+        UPDATE userfile SET filePath=REPLACE(filePath, #{param1}, #{param2})
+        WHERE filePath like N'${param1}%' and userId = #{param3}
+    </update>
+
+    <update id="replaceFilePath">
+        UPDATE userfile SET filepath=REPLACE(filepath, #{oldFilePath}, #{filePath})
+        WHERE filepath LIKE N'${oldFilePath}%' and userId = #{userId};
+    </update>
+
+    <select id="selectStorageSizeByUserId" resultType="java.lang.Long" parameterType="java.lang.Long">
+        SELECT SUM(fileSize) FROM userfile
+        LEFT JOIN file ON file.fileId = userfile.fileId
+        WHERE userfile.userId = #{userId} and deleteFlag = 0
+    </select>
 
 </mapper>

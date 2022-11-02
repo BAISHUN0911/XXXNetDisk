@@ -9,14 +9,9 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper extends BaseMapper<User> {
-
     //    新建用户
     void insertUser(User user);
-
     //    查询用户
     List<User> selectUser();
-
-
-
 
 }
